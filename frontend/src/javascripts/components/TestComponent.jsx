@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {testMessage} from '../actions/conversationActions';
+import {testMessage, conversationsApiCall} from '../actions/conversationActions';
 import React from 'react';
 
 class TestComponent extends React.Component {
@@ -12,6 +12,7 @@ class TestComponent extends React.Component {
   testClick(e) {
     e.preventDefault();
     this.props.testMessage();
+    this.props.testApiCall();
   };
 
    render() {
@@ -33,6 +34,9 @@ const mapDispatchToProps = dispatch => ({
     testMessage: () => {
       dispatch(testMessage());
     },
+    testApiCall: () => {
+      dispatch(conversationsApiCall());
+    }
  });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TestComponent);

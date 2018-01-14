@@ -1,5 +1,4 @@
 import React from 'react';
-import './stylesheets/index.css';
 import App from './javascripts/App.jsx';
 import configureStore from './javascripts/store/configureStore';
 import { Provider } from 'react-redux';

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   include DeviseTokenAuth::Concerns::SetUserByToken
 
-  before_action :authenticate_user!
+#  before_action :authenticate_user!
 
   rescue_from ActionController::ParameterMissing, with: :invalid_params
   rescue_from ActiveRecord::RecordNotFound, with: :not_found

@@ -10,6 +10,7 @@ rvm gemset create trchat
 gem install rails -v 5.1.4
 bundle install
 mv config/examples/database.yml config/    Change username and password for your own DB
+rails db:create && rails db:migrate && rails db:seed
 ```
 
 ### Run backend ###
